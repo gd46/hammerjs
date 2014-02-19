@@ -59,7 +59,6 @@
          */
         Main.prototype.handleHammer = function(ev) {
             var self = this;
-
             switch(ev.type) {
                 // reset element on start
                 case 'touch':
@@ -69,6 +68,7 @@
                 // on release we check how far we dragged
                 case 'release':
                     if(!this._dragged_down) {
+			alert("test");
                         return;
                     }
 
