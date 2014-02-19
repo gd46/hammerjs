@@ -57,8 +57,10 @@
          * Handle HammerJS callback
          * @param ev
          */
+	
         Main.prototype.handleHammer = function(ev) {
             var self = this;
+	    var body = document.getElementById('bg_color');
             switch(ev.type) {
                 // reset element on start
                 case 'touch':
@@ -68,7 +70,7 @@
                 // on release we check how far we dragged
                 case 'release':
                     if(!this._dragged_down) {
-			alert("test");
+		    	
                         return;
                     }
 
@@ -95,7 +97,7 @@
                 // when we dragdown
                 case 'dragdown':
                     this._dragged_down = true;
-
+		    body.style.backgroundColor = "blue";
                     // if we are not at the top move down
                     var scrollY = window.scrollY;
                     if(scrollY > 5) {
